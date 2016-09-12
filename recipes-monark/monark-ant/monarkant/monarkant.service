@@ -1,0 +1,9 @@
+[Unit]
+Description=Monark ANT bridge
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/Monark-ANT -platform eglfs
+
+[Install]
+WantedBy=multi-user.target
