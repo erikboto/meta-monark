@@ -1,5 +1,5 @@
 This README file contains information on the contents of the
-erborpi layer.
+monark layer.
 
 Please see the corresponding sections below for details.
 
@@ -32,19 +32,19 @@ Maintainer: Erik Botö <erik.boto@gmail.com>
 Table of Contents
 =================
 
-  I. Adding the erborpi layer to your build
+  I. Adding the monark layer to your build
  II. Misc
 
 
-I. Adding the erborpi layer to your build
+I. Adding the monark layer to your build
 =================================================
 
---- replace with specific instructions for the erborpi layer ---
+--- replace with specific instructions for the monark layer ---
 
 In order to use this layer, you need to make the build system aware of
 it.
 
-Assuming the erborpi layer exists at the top-level of your
+Assuming the monark layer exists at the top-level of your
 yocto build tree, you can add it to the build system by adding the
 location of the erborpi layer to bblayers.conf, along with any
 other layers needed. e.g.:
@@ -53,11 +53,11 @@ other layers needed. e.g.:
     /path/to/yocto/meta \
     /path/to/yocto/meta-yocto \
     /path/to/yocto/meta-yocto-bsp \
-    /path/to/yocto/meta-erborpi \
+    /path/to/yocto/meta-monark \
     "
 
 
 II. Misc
 ========
 
---- replace with specific information about the erborpi layer ---
+--- replace with specific information about the monark layer ---
