@@ -1,8 +1,12 @@
 [Unit]
 Description=Monark ANT bridge
+After=bluetooth.service brcm43438.service
+Requires=bluetooth.service brcm43438.service
 
 [Service]
 Type=simple
+ExecStartPre=/bin/sleep 5
+ExecStartPre=/usr/bin/hciconfig hci0 up
 ExecStart=/usr/bin/Monark-ANT -platform eglfs
 
 [Install]
