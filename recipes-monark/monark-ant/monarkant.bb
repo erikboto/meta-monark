@@ -8,7 +8,7 @@ SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 SYSTEMD_SERVICE_${PN} = "monarkant.service"
 
 SRC_URI = " \
-	git://github.com/erikboto/monark-ant.git;protocol=http \
+	git://github.com/erikboto/monark-ant.git;protocol=http;branch=master \
 	file://monarkant.service \
 	"
 LIC_FILES_CHKSUM = "file://main.cpp;beginline=1;endline=17;md5=6d8c6f591a945f049d346ff1cb438f24"
@@ -16,7 +16,7 @@ LIC_FILES_CHKSUM = "file://main.cpp;beginline=1;endline=17;md5=6d8c6f591a945f049
 
 S = "${WORKDIR}/git/"
 
-SRCREV = "59d56f929deb911e8a910a6b3ff49605898cfc7d"
+SRCREV = "c5ca0ad727307a0722522c14474e7caac45bc7c9"
 
 EXTRA_QMAKEVARS_PRE += "-config raspberry-pi"
 
