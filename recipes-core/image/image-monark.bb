@@ -11,4 +11,9 @@ IMAGE_INSTALL += " \
     liberation-fonts \
     qtdeclarative \
     monarkant \
+    rpi-gpio \
+    rpio \
+    python-pygobject \
+    python-dbus \
+    buttonreader \
     "
