@@ -16,7 +16,7 @@ LIC_FILES_CHKSUM = "file://main.cpp;beginline=1;endline=17;md5=6d8c6f591a945f049
 
 S = "${WORKDIR}/git/"
 
-SRCREV = "9b74208b9b3441593538fd1cac76068c3325cb71"
+SRCREV = "0dd33fdcbd75c8de02c5e0b094b533c87233964f"
 
 EXTRA_QMAKEVARS_PRE += "-config raspberry-pi"
 
