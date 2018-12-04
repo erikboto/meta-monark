@@ -1,19 +1,12 @@
 DESCRIPTION = "Monark-ANT image"
 
-inherit core-image
+require recipes-core/image/core-image-qtipi-wifi-client.bb
 
-IMAGE_FEATURES += "package-management ssh-server-dropbear tools-debug"
-
-# Qt Packages
+# Packages
 IMAGE_INSTALL += " \
-    qtbase \
-    qtbase-plugins \
-    liberation-fonts \
-    qtdeclarative \
     monarkant \
     rpi-gpio \
     rpio \
     python-pygobject \
     python-dbus \
-    buttonreader \
     "
