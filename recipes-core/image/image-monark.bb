@@ -15,5 +15,4 @@ IMAGE_INSTALL += " \
     rpio \
     python-pygobject \
     python-dbus \
-    buttonreader \
     "
