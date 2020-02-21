@@ -225,9 +225,9 @@ BB_DISKMON_DIRS = "\
 # By default qemu will build with a builtin VNC server where graphical output can be
 # seen. The two lines below enable the SDL backend too. This assumes there is a
 # libsdl library available on your build system.
-# PACKAGECONFIG_append_pn-qemu-native = " sdl"
-# PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
-# ASSUME_PROVIDED += "libsdl-native"
+PACKAGECONFIG_append_pn-qemu-native = " sdl"
+PACKAGECONFIG_append_pn-nativesdk-qemu = " sdl"
+ASSUME_PROVIDED += "libsdl-native"
 
 
 # CONF_VERSION is increased each time build/conf/ changes incompatibly and is used to
@@ -235,7 +235,6 @@ BB_DISKMON_DIRS = "\
 # this doesn't mean anything to you.
 CONF_VERSION = "1"
 MACHINE = "raspberrypi3"
-PREFERRED_VERSION_linux-raspberrypi = "4.%"
 DISTRO_FEATURES_remove = "x11 wayland"
 DISTRO_FEATURES_append = " systemd"
 VIRTUAL-RUNTIME_init_manager = "systemd"
