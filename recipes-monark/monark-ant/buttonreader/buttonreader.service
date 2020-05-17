@@ -1,12 +1,14 @@
 [Unit]
 Description=Monark GPIO Button Reader
 After=monarkant.service dbus-session@root.service
-Requires=monarkant.service dbus-session@root.service
+Requires=dbus-session@root.service
 
 [Service]
 Type=simple
 Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/root/dbus/user_bus_socket
 ExecStart=/usr/bin/buttonreader.py
+Restart=always
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
