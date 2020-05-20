@@ -19,5 +19,7 @@ IMAGE_INSTALL += " \
 IMAGE_INSTALL += " \
     monarkant \
     buttonreader \
+    mosquitto \
+    monarkui \
 "
 
