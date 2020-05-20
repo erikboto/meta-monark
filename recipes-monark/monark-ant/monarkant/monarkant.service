@@ -1,7 +1,7 @@
 [Unit]
 Description=Monark ANT bridge
-After=bluetooth.service dbus-session@root.service
-Requires=bluetooth.service dbus-session@root.service
+After=bluetooth.service dbus-session@root.service mosquitto.service
+Requires=bluetooth.service dbus-session@root.service mosquitto.service
 StartLimitInterval=1000
 StartLimitBurst=10
 

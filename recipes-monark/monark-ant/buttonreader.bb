@@ -5,6 +5,7 @@ inherit systemd
 SYSTEMD_AUTO_ENABLE_${PN} = "enable"
 SYSTEMD_SERVICE_${PN} = "buttonreader.service"
 
+require common.inc
 SRC_URI += "file://buttonreader.service"
 LIC_FILES_CHKSUM = "file://main.cpp;beginline=1;endline=17;md5=6d8c6f591a945f049d346ff1cb438f24"
 
