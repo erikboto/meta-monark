@@ -2,7 +2,7 @@ DESCRIPTION = "Monark to ANT bridge"
 LICENSE = "GPLv2"
 DEPENDS = "qtbase qtserialport qtconnectivity libusb-compat qtmqtt"
 RDEPENDS:${PN} += "dbus-session mosquitto avahi-daemon"
-inherit qmake5 systemd 
+inherit qmake5 systemd pkgconfig
 
 include common.inc
 
