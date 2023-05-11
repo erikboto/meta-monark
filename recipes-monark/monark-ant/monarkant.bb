@@ -1,13 +1,13 @@
 DESCRIPTION = "Monark to ANT bridge"
 LICENSE = "GPLv2"
 DEPENDS = "qtbase qtserialport qtconnectivity libusb-compat qtmqtt"
-RDEPENDS_${PN} += "dbus-session mosquitto avahi-daemon"
+RDEPENDS:${PN} += "dbus-session mosquitto avahi-daemon"
 inherit qmake5 systemd 
 
 include common.inc
 
-SYSTEMD_AUTO_ENABLE_${PN} = "enable"
-SYSTEMD_SERVICE_${PN} = "monarkant.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+SYSTEMD_SERVICE:${PN} = "monarkant.service"
 
 SRC_URI += " \
 	file://monarkant.service \
@@ -24,6 +24,6 @@ do_install() {
 	install -Dm0644 ${WORKDIR}/monarkant.avahi.service ${D}/etc/avahi/services/monarkant.service
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
 	/lib/systemd/ \
 	"

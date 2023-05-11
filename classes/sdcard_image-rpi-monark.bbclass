@@ -24,7 +24,7 @@ inherit linux-raspberrypi-base
 # 0                      4MiB     4MiB + 40MiB       4MiB + 40Mib + SDIMG_ROOTFS
 
 # This image depends on the rootfs image
-IMAGE_TYPEDEP_rpi-sdimg-monark = "${SDIMG_ROOTFS_TYPE}"
+IMAGE_TYPEDEP:rpi-sdimg-monark = "${SDIMG_ROOTFS_TYPE}"
 
 # Set kernel and boot loader
 IMAGE_BOOTLOADER ?= "bcm2835-bootfiles"
@@ -74,7 +74,7 @@ SDIMG_MONARK = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.rpi-sdimg-monark"
 # Additional files and/or directories to be copied into the vfat partition from the IMAGE_ROOTFS.
 FATPAYLOAD ?= ""
 
-IMAGE_CMD_rpi-sdimg-monark () {
+IMAGE_CMD:rpi-sdimg-monark () {
 
 	# Align partitions
 	BOOT_SPACE_ALIGNED=$(expr ${BOOT_SPACE} + ${IMAGE_ROOTFS_ALIGNMENT} - 1)

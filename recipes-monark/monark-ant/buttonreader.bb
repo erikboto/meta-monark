@@ -2,8 +2,8 @@ DESCRIPTION = "Monark GPIO Button Reader"
 LICENSE = "GPLv2"
 inherit systemd 
 
-SYSTEMD_AUTO_ENABLE_${PN} = "enable"
-SYSTEMD_SERVICE_${PN} = "buttonreader.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
+SYSTEMD_SERVICE:${PN} = "buttonreader.service"
 
 require common.inc
 SRC_URI += "file://buttonreader.service"
@@ -16,8 +16,8 @@ do_install() {
 	install -Dm0644 ${WORKDIR}/buttonreader.service ${D}/${systemd_unitdir}/system/buttonreader.service
 }
 
-FILES_${PN} += " \
+FILES:${PN} += " \
 	/lib/systemd/ \
 "
 
-RDEPENDS_${PN} += "python3-core python3-dbus python3-pyserial python3-pygobject"
+RDEPENDS:${PN} += "python3-core python3-dbus python3-pyserial python3-pygobject"
