@@ -10,16 +10,11 @@ IMAGE_ROOTFS_EXTRA_SPACE = "200000"
 IMAGE_INSTALL += " \
     systemd-analyze \
     openssh-sftp-server \
-    avahi-daemon \
     vim \
-    network-config-wifi-client \
 "
 
 # Packages
 IMAGE_INSTALL += " \
     monarkant \
-    buttonreader \
-    mosquitto \
-    monarkui \
 "
 
