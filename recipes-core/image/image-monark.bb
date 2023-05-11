@@ -1,6 +1,6 @@
 DESCRIPTION = "Monark-ANT image"
 
-inherit core-image populate_sdk_qt5
+inherit core-image
 IMAGE_FEATURES += "package-management ssh-server-openssh tools-debug"
 
 # Reduce amount of extra space
