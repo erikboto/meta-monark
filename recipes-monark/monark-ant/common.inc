@@ -1,2 +1,2 @@
-SRC_URI += "git://github.com/erikboto/monark-ant.git;protocol=http"
-SRCREV = "4d31c343b74fc9bbf7f105ad601ef61f8f8e3255"
+SRC_URI += "git://github.com/erikboto/monark-ant.git;protocol=http;branch=master"
+SRCREV = "1c160e7223e913bdb13e3d7467bd99a331916097"

@@ -1,14 +1,16 @@
 [Unit]
 Description=Monark ANT bridge
-After=bluetooth.service dbus-session@root.service mosquitto.service
-Requires=bluetooth.service dbus-session@root.service mosquitto.service
+After=hciuart.service dbus-session@root.service mosquitto.service
+Requires=hciuart.service bluetooth.service dbus-session@root.service mosquitto.service
 StartLimitInterval=1000
 StartLimitBurst=10
 
 [Service]
 Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/root/dbus/user_bus_socket
 Type=simple
+ExecStartPre=/bin/sleep 5
 ExecStartPre=/usr/bin/hciconfig hci0 up
+ExecStartPre=/bin/sh -c "/bin/echo none > /sys/class/leds/led0/trigger"
 ExecStart=/usr/bin/Monark-ANT -platform eglfs
 Restart=always
 RestartSec=3
